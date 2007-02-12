@@ -1,5 +1,5 @@
 Summary:	Xfce panel smartbookmark plugin
-Summary(pl):	Sprytne zak≥adki dla Xfce panel
+Summary(pl.UTF-8):   Sprytne zak≈Çadki dla Xfce panel
 Name:		xfce4-smartbookmark-plugin
 Version:	0.4.2
 Release:	1
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is a simple plugin that lets the user send requests directly to
 your browser and perform a custom search.
 
-%description -l pl
-Wtyczka ta pozwala na wysy≥anie zapytaÒ bezpo∂rednio do zdefiniowanych
+%description -l pl.UTF-8
+Wtyczka ta pozwala na wysy≈Çanie zapyta≈Ñ bezpo≈õrednio do zdefiniowanych
 stron WWW.
 
 %prep
