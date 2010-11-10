@@ -1,0 +1,12 @@
+Index: xfce4-smartbookmark-plugin-0.4.2/src/smartbookmark.desktop.in.in
+===================================================================
+--- xfce4-smartbookmark-plugin-0.4.2.orig/src/smartbookmark.desktop.in.in	2009-03-06 09:14:24.000000000 +0100
++++ xfce4-smartbookmark-plugin-0.4.2/src/smartbookmark.desktop.in.in	2009-03-06 09:14:58.000000000 +0100
+@@ -4,5 +4,6 @@
+ _Name=SmartBookmark
+ _Comment=Query websites from the Xfce panel
+ Icon=gtk-preferences
+-X-XFCE-Module=@INTERNAL_PLUGIN_PATH@/libsmartbookmark.so
++X-XFCE-Module=smartbookmark
++X-XFCE-Module-Path=@INTERNAL_PLUGIN_PATH@
+ X-XFCE-Unique=false
