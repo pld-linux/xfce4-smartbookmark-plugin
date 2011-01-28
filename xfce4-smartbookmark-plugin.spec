@@ -11,6 +11,7 @@ Patch0:		%{name}-startup.patch
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	intltool
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
