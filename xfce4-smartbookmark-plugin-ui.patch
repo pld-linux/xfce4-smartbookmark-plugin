@@ -1,0 +1,44 @@
+--- xfce4-smartbookmark-plugin-0.4.2/src/smartbookmark.c~	2006-08-12 19:41:44.000000000 +0200
++++ xfce4-smartbookmark-plugin-0.4.2/src/smartbookmark.c	2011-07-12 10:19:54.915229439 +0200
+@@ -43,8 +43,8 @@
+ #include <gdk/gdkx.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/dialogs.h>
+-#include <libxfce4panel/xfce-panel-plugin.h>
++#include <libxfce4ui/libxfce4ui.h>
++#include <libxfce4panel/libxfce4panel.h>
+ 
+ /*
+  * Types
+--- xfce4-smartbookmark-plugin-0.4.2/configure.ac~	2006-08-12 19:41:44.000000000 +0200
++++ xfce4-smartbookmark-plugin-0.4.2/configure.ac	2011-07-12 10:25:01.693729429 +0200
+@@ -25,7 +25,7 @@
+ dnl Check for required packages
+ XDT_CHECK_LIBX11_REQUIRE()
+ XDT_CHECK_PACKAGE([GDK], [gdk-2.0], [2.0])
+-XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfce4panel-1.0], [4.2])
++XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-1], [4.2])
+ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.20])
+ 
+ XDT_FEATURE_DEBUG()
+--- xfce4-smartbookmark-plugin-0.4.2/src/Makefile.am~	2006-08-12 19:41:44.000000000 +0200
++++ xfce4-smartbookmark-plugin-0.4.2/src/Makefile.am	2011-07-12 10:26:47.798229430 +0200
+@@ -8,7 +8,7 @@
+ 	-avoid-version							\
+ 	-module						\
+ 	@LIBXFCE4PANEL_LIBS@ \
+-	@LIBXFCEGUI4_LIBS@	\
++	@LIBXFCE4UI_LIBS@	\
+ 	@GDK_LIBS@	\
+ 	@LIBX11_LDFLAGS@
+ 
+@@ -19,7 +19,7 @@
+ libsmartbookmark_la_CFLAGS =	 \
+ 	-O0		\
+ 	-I$(top_srcdir) \
+-	@LIBXFCEGUI4_CFLAGS@ \
++	@LIBXFCE4UI_CFLAGS@ \
+ 	@LIBXFCE4PANEL_CFLAGS@ \
+ 	@LIBX11_CFLAGS@	\
+ 	@GDK_CFLAGS@	\

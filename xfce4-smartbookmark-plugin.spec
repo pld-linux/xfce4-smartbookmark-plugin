@@ -8,12 +8,14 @@ Group:		X11/Applications
 Source0:	http://goodies.xfce.org/releases/xfce4-smartbookmark-plugin/%{name}-%{version}.tar.gz
 # Source0-md5:	284e26595637dd2e900b75534372496b
 Patch0:		%{name}-startup.patch
+Patch1:		%{name}-ui.patch
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	intltool
 BuildRequires:	libtool
+BuildRequires:	libxfce4ui-devel
 BuildRequires:	pkgconfig
 BuildRequires:	xfce4-dev-tools >= 4.4.0
 BuildRequires:	xfce4-panel-devel >= 4.4.0
@@ -31,6 +33,7 @@ stron WWW.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__intltoolize}
