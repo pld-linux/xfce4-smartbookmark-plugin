@@ -2,7 +2,7 @@ Summary:	Xfce panel smartbookmark plugin
 Summary(pl.UTF-8):	Sprytne zakładki dla Xfce panel
 Name:		xfce4-smartbookmark-plugin
 Version:	0.4.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.4/%{name}-%{version}.tar.bz2
@@ -42,6 +42,8 @@ stron WWW.
 %configure \
 	--disable-static
 %{__make}
+
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
 
 %install
 rm -rf $RPM_BUILD_ROOT
