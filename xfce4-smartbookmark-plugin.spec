@@ -10,7 +10,7 @@ Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	intltool
 BuildRequires:	libtool >= 2:2.2.6
 BuildRequires:	libxfce4ui-devel
