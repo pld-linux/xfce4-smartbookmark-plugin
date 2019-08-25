@@ -1,12 +1,12 @@
 Summary:	Xfce panel smartbookmark plugin
 Summary(pl.UTF-8):	Sprytne zakładki dla Xfce panel
 Name:		xfce4-smartbookmark-plugin
-Version:	0.4.6
+Version:	0.5.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	01b7735d4d9ab0150d4ddd3becb94d5f
+Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.5/%{name}-%{version}.tar.bz2
+# Source0-md5:	f1c97ac62dd9054e8f2b01568fef3ba6
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -15,10 +15,10 @@ BuildRequires:	intltool
 BuildRequires:	libtool >= 2:2.2.6
 BuildRequires:	libxfce4ui-devel
 BuildRequires:	pkgconfig
-BuildRequires:	xfce4-dev-tools >= 4.12.0
-BuildRequires:	xfce4-panel-devel >= 4.12.0
+BuildRequires:	xfce4-dev-tools >= 4.14.0
+BuildRequires:	xfce4-panel-devel >= 4.14.0
 Requires:	exo
-Requires:	xfce4-panel >= 4.12.0
+Requires:	xfce4-panel >= 4.14.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
