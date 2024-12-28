@@ -1,24 +1,25 @@
 Summary:	Xfce panel smartbookmark plugin
 Summary(pl.UTF-8):	Sprytne zakładki dla Xfce panel
 Name:		xfce4-smartbookmark-plugin
-Version:	0.5.2
+Version:	0.5.3
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	a418a441a57c9e0248d13c467fac050e
-URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin
+Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.5/%{name}-%{version}.tar.bz2
+# Source0-md5:	8be187c4a4ef0ecc16f1e039b255a988
+URL:		https://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-tools
-BuildRequires:	intltool
+BuildRequires:	glib2-devel >= 1:2.50.0
+BuildRequires:	gtk+3-devel >= 3.22.0
 BuildRequires:	libtool >= 2:2.2.6
-BuildRequires:	libxfce4ui-devel
+BuildRequires:	libxfce4ui-devel >= 4.16.0
 BuildRequires:	pkgconfig
-BuildRequires:	xfce4-dev-tools >= 4.14.0
-BuildRequires:	xfce4-panel-devel >= 4.14.0
+BuildRequires:	xfce4-dev-tools >= 4.16.0
+BuildRequires:	xfce4-panel-devel >= 4.16.0
 Requires:	exo
-Requires:	xfce4-panel >= 4.14.0
+Requires:	xfce4-panel >= 4.16.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +36,6 @@ stron WWW.
 %{__sed} -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac
 
 %build
-%{__intltoolize}
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hye,ur_PK}
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hye,ie,ur_PK}
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/libsmartbookmark.la
 
